@@ -1,0 +1,34 @@
+# client
+auto eth0
+iface eth0 inet dhcp
+
+# web1
+auto eth0
+iface eth0 inet static
+    address 192.168.200.20
+    netmask 255.255.255.0
+
+# web2
+auto eth0
+iface eth0 inet static
+    address 192.168.200.21
+    netmask 255.255.255.0
+
+# netics-pc-5
+auto eth0
+iface eth0 inet static
+    address 192.168.200.10
+    netmask 255.255.255.0
+
+# netics-pc-6
+auto eth0
+iface eth0 inet static
+    address 192.168.200.11
+    netmask 255.255.255.0
+
+# netics-pc-7
+auto eth0
+iface eth0 inet static
+    address 192.168.200.12
+    netmask 255.255.255.0
+
