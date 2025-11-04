@@ -1,9 +1,5 @@
 #!/bin/bash
 
-mkdir -p /myscripts/myconfig
-mkdir -p /myscripts/myweb
-mkdir -p /myscripts/mylogs
-
 cat > /myscripts/myweb/index.html <<'EOF'
 <html>
 	<head>
@@ -29,7 +25,7 @@ events { worker_connections 768; }
 http {
 	server {
 		listen 8080;
-		server_name _;
+		server_name netics.my.id;
 		
 		root /myscripts/myweb;
 		index index.html;
@@ -45,5 +41,3 @@ cat > /myscripts/myconfig/start_http.sh <<'EOF'
 #!/bin/bash
 nginx -c /myscripts/myconfig/nginx.conf -g 'daemon off;'
 EOF
-
-echo "Succesfully setup WEB1!"
