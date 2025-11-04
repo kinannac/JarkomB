@@ -1,34 +1,59 @@
-# client
+# client (netics-pc-1, netics-pc-2, netics-pc-desktop-1)
 auto eth0
 iface eth0 inet dhcp
 
-# web1
+# web1 (HTTP server)
 auto eth0
 iface eth0 inet static
     address 192.168.200.20
     netmask 255.255.255.0
 
-# web2
+up mkdir -p /myscripts
+up mkdir -p /myscripts/myconfig
+up mkdir -p /myscripts/myweb
+up mkdir -p /myscripts/mylogs
+
+
+# web2 (HTTP server)
 auto eth0
 iface eth0 inet static
     address 192.168.200.21
     netmask 255.255.255.0
 
-# netics-pc-5
+up mkdir -p /myscripts
+up mkdir -p /myscripts/myconfig
+up mkdir -p /myscripts/myweb
+up mkdir -p /myscripts/mylogs
+
+
+# netics-pc-5 (DHCP server)
 auto eth0
 iface eth0 inet static
     address 192.168.200.10
     netmask 255.255.255.0
 
-# netics-pc-6
+up mkdir -p /myscripts
+
+
+# netics-pc-6 (Reverse Proxy)
 auto eth0
 iface eth0 inet static
     address 192.168.200.11
     netmask 255.255.255.0
 
-# netics-pc-7
+up mkdir -p /myscripts
+up mkdir -p /myscripts/myconfig
+up mkdir -p /myscripts/mylogs
+
+
+# netics-pc-7 (DNS server)
 auto eth0
 iface eth0 inet static
     address 192.168.200.12
     netmask 255.255.255.0
+
+up mkdir -p /myscripts
+up mkdir -p /myscripts/dns
+up mkdir -p /myscripts/dnsdata
+
 
